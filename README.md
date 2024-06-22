@@ -43,101 +43,24 @@ Features
 
 The specific machine learning model used in this code is the "paraphrase-MiniLM-L6-v2" model from SentenceTransformer. It's a pre-trained transformer-based model designed for encoding sentences into dense vector representations. The SentenceTransformer library, in general, uses various transformer architectures for training its models, and the details of the underlying transformer architecture are encapsulated within the pre-trained models provided by the library.
 
-/////
-Libraries and Dependencies:
 
-The project utilizes several Python libraries, including Streamlit, NLTK, Spacy, PyMySQL, PIL (Pillow), and others.
-It downloads NLTK stopwords and loads the English language model for spaCy.
-Resume Parsing:
 
-The pyresparser library is used for parsing resume data from PDF files.
-The pdf_reader function extracts text content from PDF files using PDFMiner.
-Courses and Certificates Recommendations:
+#DEMO - 
 
-The application recommends courses and certificates based on the skills identified in the user's resume.
-Courses are categorized into Data Science, Web Development, Android Development, iOS Development, and UI-UX Development.
-Recommendations are generated using sentence embeddings and cosine similarity.
-Database Integration:
 
-The project uses a MySQL database to store user data, including details like name, email, resume score, timestamp, etc.
-There's a function (insert_data) for inserting user data into the database.
-User Interface (UI):
 
-Streamlit is used for building the web-based user interface.
-Users can upload their resumes (in PDF format) and get recommendations for skills, courses, and certificates.
-The UI includes sliders, tags for skills, and displays recommendations.
-Admin Panel:
+#Screen Shots - 
 
-There is an admin section with login functionality.
-Once logged in, the admin can view user data, including details like resume scores, predicted fields, and recommended skills/courses.
-Admins can also download a CSV report of user data.
-Data Visualization:
+![Screenshot (232)](https://github.com/Gauravvnegi/CV_Analyzer/assets/92495217/58fb5a5e-51e8-4199-a32b-39db89818f7a)
 
-The project includes data visualization using Plotly Express for generating pie charts.
-Pie charts represent the distribution of predicted fields and user experience levels based on the stored user data.
-YouTube Video Integration:
+![Screenshot (233)](https://github.com/Gauravvnegi/CV_Analyzer/assets/92495217/df9a2847-ce87-4185-85b9-0b160228665b)
 
-YouTube videos related to resume writing tips and interview preparation are embedded in the UI.
-Videos are randomly selected from predefined lists (resume_videos and interview_videos).
-Security Considerations:
+![Screenshot (234)](https://github.com/Gauravvnegi/CV_Analyzer/assets/92495217/805ed991-637a-453f-9f86-210e98fb6bc1)
 
-There's a basic admin authentication mechanism with a hardcoded username and password.
-Project Structure:
+![Screenshot (235)](https://github.com/Gauravvnegi/CV_Analyzer/assets/92495217/d7a854e7-3680-491e-aeb6-fe1540c7ef3e)
 
-The project seems to be organized into functions, making it modular and easier to understand.
-Deployment:
+![Screenshot (239)](https://github.com/Gauravvnegi/CV_Analyzer/assets/92495217/980fda1a-2e9e-4e09-b7b2-65cec8420a0c)
 
-The Streamlit app is deployed locally, allowing users to access it through a web browser.
+![Screenshot (240)](https://github.com/Gauravvnegi/CV_Analyzer/assets/92495217/1ffb9730-5568-4c27-8457-cbc4121e879e)
 
-///
 
-The choice of using Streamlit over HTML, CSS, JavaScript, or other tools depends on the project requirements, ease of development, and the intended audience. Here are some reasons why Streamlit might be a suitable choice for this project:
-
-Simplicity and Rapid Development:
-
-Streamlit is designed for simplicity and rapid prototyping. It allows developers to create interactive web applications with minimal effort and code.
-The project code appears concise, making it easy to understand and maintain.
-Python-Based:
-
-Streamlit is a Python library, which can be advantageous if the development team is more comfortable with Python.
-It eliminates the need for additional languages like HTML, CSS, or JavaScript, which might be required in traditional web development.
-Data Science Integration:
-
-Streamlit is popular among data scientists and analysts for creating interactive data visualizations and dashboards.
-In this project, where data analysis and visualization are key components, Streamlit provides a seamless integration with data science workflows.
-Built-In Widgets:
-
-Streamlit provides built-in widgets like sliders, file uploaders, tags, etc., making it easy to create interactive elements without extensive HTML or JavaScript knowledge.
-Embedding Python Code:
-
-Streamlit allows developers to embed Python code directly within the application, enabling dynamic content generation and interaction.
-Deployment Convenience:
-
-Streamlit apps can be easily deployed using Streamlit sharing or other hosting platforms, requiring minimal configuration compared to setting up a traditional web server for HTML, CSS, and JavaScript.
-Focus on Data Applications:
-
-Streamlit is specifically designed for creating data-centric applications and dashboards. It provides features tailored to data analysis and visualization tasks.
-Community and Documentation:
-
-Streamlit has an active community and comprehensive documentation, making it easier for developers to find support and resources.
-
-In the modified code, the SentenceTransformer is used to encode the resume skills and predefined keywords into dense vectors (embeddings). These embeddings capture the semantic meaning of the skills and keywords in a continuous vector space. The cosine similarity between these embeddings is then calculated to measure the similarity between the resume skills and predefined keywords for different fields (Data Science, Web Development, Android Development, IOS Development, UI-UX Development).
-
-Here's a breakdown of the use:
-
-Embedding Skills and Keywords:
-
-The SentenceTransformer model is initialized with the specified architecture ('paraphrase-MiniLM-L6-v2').
-The resume skills and predefined keywords for each field are encoded into dense vectors using the encode method of the SentenceTransformer model.
-Calculating Cosine Similarity:
-
-The cosine similarity is calculated between the resume skills and the predefined keyword embeddings for each field.
-This similarity measure indicates how close or similar the resume skills are to the skills associated with each field.
-Field Recommendation:
-
-The field with the highest average cosine similarity is selected as the recommended field for the candidate.
-This recommendation is based on the assumption that the candidate's skills are more similar to the skills of a particular field.
-Displaying Recommended Courses:
-
-Finally, the code displays a specified number of recommended courses for the chosen field.
-In summary, by using Sentence Transformer, you leverage pre-trained models that understand the semantic meaning of words and phrases, allowing for a more sophisticated comparison of skills and better field recommendations based on the semantic similarity between the candidate's skills and predefined keyword sets.
