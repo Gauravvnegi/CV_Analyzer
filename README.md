@@ -49,6 +49,10 @@ The specific machine learning model used in this code is the "paraphrase-MiniLM-
 
 
 
+
+https://github.com/Gauravvnegi/CV_Analyzer/assets/92495217/1e81cdc4-5ec3-40e5-9edf-a6a9b5973e19
+
+
 #Screen Shots - 
 
 ![Screenshot (232)](https://github.com/Gauravvnegi/CV_Analyzer/assets/92495217/58fb5a5e-51e8-4199-a32b-39db89818f7a)
