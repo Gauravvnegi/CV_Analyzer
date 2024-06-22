@@ -1,14 +1,15 @@
 Features
 
-Resume Parsing
-Information Extraction
-Keyword Matching
-Background Analysis
-Skill Matching
-Scoring
-Suggestion to improve skill
-Recommend Skill
-Recommend courses and videos
+1.Resume Parsing
+2.Information Extraction
+3.Keyword Matching
+4.Bckground Analysis
+5.Skill Matching
+6.Scoring
+7.Suggestion to improve skill
+8.Recommend Skill
+9.Recommend courses and videos
+
 
 
 #DEMO - 
